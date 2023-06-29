@@ -34,13 +34,13 @@ buttonSet.addEventListener('click', () => {
    timer.updateMinutes(NewMinutes);
 });
 buttonSoundOn.addEventListener('click', () => {
-   controls.AudioControl();
-   sound.PressButton();
-   sound.BgAudio.play();
+   buttonSoundOff.classList.remove('hide');
+   buttonSoundOn.classList.add('hide');
+   sound.BgAudio.pause();
 });
 buttonSoundOff.addEventListener('click', () => {
-   controls.AudioControl();
-   sound.PressButton();
-   sound.BgAudio.pause();
+   buttonSoundOff.classList.add('hide');
+   buttonSoundOn.classList.remove('hide');
+   sound.BgAudio.play();
 });
 };

@@ -4,8 +4,6 @@ export default function Controls({
    buttonPause,
    buttonSet,
    buttonStop,
-   buttonSoundOn,
-   buttonSoundOff,
 }) {
 
    function ReleaseTheTime() {
@@ -34,17 +32,11 @@ export default function Controls({
       };
       return NewMinutes;
    };
-
-   function AudioControl() {
-      buttonSoundOn.classList.toggle('hide');
-      buttonSoundOff.classList.toggle('hide');
-   };
-
+   
    return {
       ReleaseTheTime,
       StopOrContinueTime,
       ResetTimeControl,
       getMinutes,
-      AudioControl,
    }
 };
